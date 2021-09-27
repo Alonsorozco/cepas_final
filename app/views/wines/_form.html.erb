@@ -26,6 +26,12 @@
     <%= link_to_add_association 'Add Strain', form, :blends %>
   </div>
 
+  <div class="field">
+    <%= form.fields_for :wine_scores do |ff| %>
+      <%= render 'wine_score_fields', f: ff %>
+    <% end %>
+  </div>
+
 
   <div class="actions">
     <%= form.submit %>
