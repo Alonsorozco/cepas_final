@@ -4,5 +4,5 @@ class Wine < ApplicationRecord
     has_many :wine_scores
     has_many :oenologists, through: :wine_scores
 
-    accepts_nested_attributes_for :blends, reject_if: :all_blank
+    accepts_nested_attributes_for :blends, :wine_scores, reject_if: :all_blank
 end
